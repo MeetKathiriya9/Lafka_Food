@@ -502,6 +502,7 @@
     padding: 10px;
     border: 1px solid lightgray;
     border-radius: 8px;
+    background-color: #ffca3c;
 }
 
 .product_menu .product_list .product_item p{
