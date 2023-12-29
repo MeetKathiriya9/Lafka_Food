@@ -1,0 +1,299 @@
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    /* height: 750px;
+    background-image: url("../images/red-hero-back-home.jpg");
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; */
+    padding: 15px 0px 0px;
+}
+
+.header .navbar_head {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.navigation {
+    width: 100%;
+    background-color: #222222;
+    display: flex;
+    justify-content: space-around;
+    height: 58px;
+}
+
+.navigation .navbar_header,
+.navigation .navbar_header2 {
+    line-height: 57px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0px 0px 0px 160px;
+}
+
+.navigation .navbar_header2 {
+    margin: 0px 160px 0px 0px;
+}
+
+.logo {
+    text-align: center;
+    position: relative;
+    background-color: #ffca3c;
+    height: 130px;
+}
+
+.logo img {
+    width: 50%;
+    object-fit: contain;
+    margin-top: 15px;
+    z-index: 100;
+}
+
+.logo::before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0;
+    bottom: -40px;
+    border-width: 20px 55px;
+    border-style: solid;
+    border-color: #ffca3c transparent transparent #ffca3c;
+}
+
+.logo::after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    bottom: -40px;
+    border-width: 20px 55px;
+    border-style: solid;
+    border-color: #ffca3c #ffca3c transparent transparent;
+}
+
+.menu {
+    display: inline;
+}
+
+.menu_offcanvas {
+    display: none;
+}
+
+.menu li {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 20px 0px 15px;
+}
+
+.menu a {
+    font-weight: 600;
+    font-size: 13px;
+    color: white;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #fccc4c;
+}
+
+.active__menu {
+    color: #fccc4c !important;
+}
+
+.call_btn {
+    display: none;
+}
+
+.navbar_header3 {
+    padding: 30px 40px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar_header3 .navbar_button1 {
+    background-color: white;
+    color: #4b4b4b;
+    font-size: 13px;
+    padding: 7px 0px;
+    width: 180px;
+    border: none;
+    border-radius: 100px;
+    box-shadow: -6px 5px 13px -10px grey;
+}
+
+.navbar_header3 .navbar_button1 span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ri-phone-fill {
+    font-size: 18px;
+}
+
+.navbar_header3 .navbar_button2 {
+    background-color: white;
+    color: #4b4b4b;
+    font-size: 13px;
+    padding: 7px 0px;
+    width: 180px;
+    border: none;
+    border-radius: 100px;
+    box-shadow: -6px 5px 13px -10px grey;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar_header3 .navbar_button2 span {
+    font-size: 23px;
+    line-height: 33px;
+}
+
+
+.navbar_btn_con {
+    display: flex;
+}
+
+.ri-shopping-cart-line {
+    cursor: pointer;
+}
+
+
+.cart__badge {
+    position: absolute;
+    font-size: 11px !important;
+    line-height: 15px !important;
+    font-weight: bold;
+    color: white;
+    background-color: #333333;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    top: 107px;
+    right: 85px;
+}
+
+@media (max-width:1190px) {
+
+    .navigation .navbar_header,
+    .navigation .navbar_header2,
+    .ri-heart-line,
+    .ri-search-2-line {
+        display: none;
+    }
+
+    .navbar_header3 .navbar_button2 {
+        width: 97px;
+        padding: 7px 0px 0px 7px;
+    }
+
+    .menu_offcanvas {
+        background-color: #f2002d;
+        color: white;
+        font-size: 27px;
+        width: 48px;
+        height: 48px;
+        margin-left: 15px;
+        border: none;
+        border-radius: 100px;
+        box-shadow: -6px 5px 13px -10px grey;
+        display: block;
+    }
+
+    .cart__badge {
+        font-size: 9px !important;
+        line-height: 15px !important;
+        width: 14px;
+        height: 14px;
+        right: 111px;
+    }
+}
+
+@media (max-width:768px) {
+
+    .navbar_btn_con {
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .navbar_btn_con .navbar_button2 {
+        flex-direction: column;
+        width: 42px;
+        height: 92px;
+        padding: 5px 0px 5px 10px;
+        position: absolute;
+        right: 3px;
+        top: 175px;
+    }
+
+    .navbar_header3 .navbar_button1 {
+        display: none;
+    }
+
+    .navbar_header3 {
+        padding: 20px 15px 0px;
+    }
+
+    .call_btn {
+        background-color: #a1ba32;
+        color: white;
+        font-size: 27px;
+        width: 48px;
+        height: 48px;
+        border: none;
+        border-radius: 100px;
+        box-shadow: -6px 5px 13px -10px grey;
+        display: block;
+    }
+
+    .call_btn .ri-phone-fill {
+        font-size: 24px;
+        padding: 0px;
+    }
+
+    .cart__badge {
+        font-size: 9px !important;
+        line-height: 15px !important;
+        width: 14px;
+        height: 14px;
+        top: 42px;
+        right: 1px;
+    }
+}
+
+
+
+@media (max-width:576px) {
+    .logo {
+        height: 100px;
+        width: 171px;
+    }
+
+    .logo img {
+        width: 47%;
+    }
+
+    .logo::before,
+    .logo::after {
+        border-width: 20px 43px;
+    }
+}
+
+@media (max-width:425px) {
+    .logo {
+        height: 90px;
+        width: 140px;
+    }
+
+    .logo img {
+        width: 50%;
+    }
+
+    .logo::before,
+    .logo::after {
+        border-width: 20px 35px;
+    }
+}

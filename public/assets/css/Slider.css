@@ -1,0 +1,49 @@
+.Slider_body{
+    background-image: url('../images/back-romana.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 60px;
+}
+
+.Slider_body .Slider{
+    width: 65%;
+    margin: auto;
+}
+
+.Slider_box{
+    padding: 88px 0px;
+}
+
+.Slider_box .img{
+    width: 41px;
+    margin: auto;
+}
+
+.Slider_box h4{
+    font-size: 26px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    line-height: 36px;
+}
+
+.Slider_box .stars{
+    margin: auto;
+    padding-bottom: 18px;
+}
+
+.Slider_box p{
+    color: #888888;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width:425px){
+    .Slider_box h4{
+        font-size: 17px;
+        text-align: center;
+        padding-top: 25px;
+        padding-bottom: 35px;
+        line-height: 28px;
+    }
+}
