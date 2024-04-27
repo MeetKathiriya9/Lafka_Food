@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Col } from 'reactstrap'
 import logo from '../asset/images/logo-lafka-shop.png'
 import { NavLink } from 'react-router-dom'
@@ -6,16 +6,55 @@ import { NavLink } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartUiActions } from '../Store/ShoppingCart/CartSliceUi'
 
+import close from '../asset/images/close.png'
+
 
 export default function Header() {
-  
+
   const totalQuantity = useSelector(state => state.cart.totalQuantity)
 
   const dispatch = useDispatch();
 
   const toggleCart = () => {
-      dispatch(cartUiActions.toggle());
+    dispatch(cartUiActions.toggle());
   }
+
+
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleNav = () => {
+    setIsActive(!isActive);
+  };
+
+
+
+  const nav__link = [
+    {
+      display: "Home",
+      path: "/home"
+    },
+    {
+      display: "Foods",
+      path: "/foods"
+    },
+    {
+      display: "Cart",
+      path: "/cart"
+    },
+    {
+      display: "Contact",
+      path: "/contact"
+    },
+    {
+      display: "Login",
+      path: "/login"
+    },
+    {
+      display: "Register",
+      path: "/register"
+    }
+  ]
+  const [activeLink, setActiveLink] = useState('/home')
 
   return (
     <header className='header'>
@@ -47,6 +86,24 @@ export default function Header() {
             </div>
           </div>
 
+          <ul className={`Nav-menu ${isActive ? 'active' : ''}`}>
+
+          <button onClick={toggleNav}><img src={close} alt='' /></button>
+
+            {/* Add your menu items here */}
+            {
+              nav__link.map((item, index) => {
+                return (
+                  <li key={index} className='nav-item'>
+                    <NavLink to={item.path} onClick={() => setActiveLink(item.path)} className={`nav-tab ${activeLink === item.path ? 'active_menu' : ''}`}>{item.display}</NavLink>
+                  </li>
+                )
+              })
+            }
+
+          </ul>
+
+
           <Col>
 
             <div className='nav__right navbar_header3'>
@@ -68,11 +125,11 @@ export default function Header() {
                   <span><i className="ri-search-2-line"></i></span>
                 </button>
 
-                <button className="menu_offcanvas">
+                <button className="menu_offcanvas" onClick={toggleNav}>
                   <span><i className="ri-menu-2-line"></i></span>
                 </button>
               </div>
-              
+
             </div>
 
           </Col>

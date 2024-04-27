@@ -7,38 +7,53 @@ import { useState } from 'react'
 
 import ReactPaginate from 'react-paginate'
 
-
 export default function Allfood() {
 
   const [searchTerm, setSearchTerm] = useState('');
-  // const [productData, setProductData] = useState(products);
+  const [productData, setProductData] = useState(products);
   const [pageNumber, setPageNumber] = useState(0)
+
   const productPerPage = 8;
-  const visitedPage = pageNumber * productPerPage;
-  const displayPage = products.slice(visitedPage, visitedPage + productPerPage)
-  const pageCount = Math.ceil(products.length / productPerPage)
-  const changePage = ({ selected }) => {
+
+  // const visitedPage = pageNumber * productPerPage;
+  // const displayPage = productData.slice(visitedPage, visitedPage + productPerPage)
+
+  const displayPage = productData
+  .filter(item => {
+    if (searchTerm === '') {
+      return true; // Return all items if searchTerm is empty
+    }
+    return item.title.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+  
+  const updatedProductPerPage = displayPage.length <= productPerPage ? displayPage.length : productPerPage;
+
+  const visitedPage = pageNumber * updatedProductPerPage;
+  const currentPageProducts = displayPage.slice(visitedPage, visitedPage + updatedProductPerPage);
+  const pageCount = Math.ceil(productData.length / productPerPage)
+ 
+  const pageChangeHandler = ({selected}) =>{
     setPageNumber(selected)
-  }
+}
 
   return (
     <div>
 
-      <CommonSection title="BURGER HAHAHAHAH..."></CommonSection>
+      <CommonSection title="All Foods"></CommonSection>
 
       <section>
         <Container>
           <Row>
             <Col className='search_bar'>
 
-              <input type='text' placeholder="Search Products" className='search__widget' value={searchTerm} onChange={e => setSearchTerm(e.target.value)}></input>
+              <input type='text' placeholder="Search Products" className='search__widget' value={searchTerm} onChange={(e) => {setSearchTerm(e.target.value); setPageNumber(0)}}></input>
 
             </Col>
 
 
             <div className='product_menu'>
               {
-                displayPage.filter((item) => {
+                currentPageProducts.filter((item) => {
                   if (searchTerm.value === '') {
                     return item;
                   }
@@ -53,12 +68,8 @@ export default function Allfood() {
               }
             </div>
 
-            <div>
-              <ReactPaginate pageCount={pageCount} onPageChange={changePage}
-                previousLabel={"Prev"}
-                nextLabel={"Next"} containerClassName=" paginationBttns ">
-
-              </ReactPaginate>
+            <div className='item_pagination'>
+              <ReactPaginate pageCount={pageCount} onPageChange={pageChangeHandler} previousLabel="< Prev" nextLabel="Next >" className='pagination text-center'></ReactPaginate>
             </div>
           </Row>
         </Container>

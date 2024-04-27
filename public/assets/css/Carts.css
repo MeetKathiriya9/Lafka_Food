@@ -45,7 +45,7 @@
 .cart__item-list {
     height: calc(100vh - 179px);
     overflow-y: scroll;
-    scrollbar-color: #007 #bada55;
+    scrollbar-color: red #a0a0a0;
 }
 
 .cart__container .cart .cart__item-list .text {
@@ -105,6 +105,14 @@
 
 @media only screen and (max-width: 576px) {
     .cart {
-        width: 300px !important;
+        width: 400px !important;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .cart {
+        width: 319px !important;
+    }
+    .cart__bottom {
+        width: 280px;
     }
 }

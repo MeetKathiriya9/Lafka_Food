@@ -70,3 +70,8 @@
     margin-bottom: -3px;
 }
 
+@media (max-width:400px){
+    .cart__item .cart__item-info{
+        padding-bottom: 15px;
+    }
+}

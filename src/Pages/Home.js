@@ -15,10 +15,18 @@ import food3 from '../asset/images/ice-cream.png'
 import food4 from '../asset/images/salad.png'
 import ProductCart from './ProductCart'
 import Slider from '../Slider/Slider'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init({
+      offset: 120,
+      duration: 1000,
+    });
+  }, [])
 
   // product cart
 
@@ -79,7 +87,7 @@ export default function Home() {
 
         <section className='product_category'>
 
-          <div className='product_cards'>
+          <div className='product_cards' data-aos="fade-up" data-aos-duration='100'>
 
             <div className='product_card'>
               <img src={cat_logo1} alt="" />
@@ -88,7 +96,7 @@ export default function Home() {
 
           </div>
 
-          <div className='product_cards'>
+          <div className='product_cards' data-aos="fade-up" data-aos-duration='200'>
 
             <div className='product_card'>
               <img src={cat_logo2} alt="" />
@@ -97,7 +105,7 @@ export default function Home() {
 
           </div>
 
-          <div className='product_cards'>
+          <div className='product_cards' data-aos="fade-up" data-aos-duration='300'>
 
             <div className='product_card'>
               <img src={cat_logo5} alt="" />
@@ -106,16 +114,16 @@ export default function Home() {
 
           </div>
 
-          <div className='product_cards'>
+          <div className='product_cards' data-aos="fade-up" data-aos-duration='400'>
 
-            <div className='product_card'>
+            <div className='product_card' >
               <img src={cat_logo3} alt="" />
             </div>
             <p>DESSERTS</p>
 
           </div>
 
-          <div className='product_cards'>
+          <div className='product_cards' data-aos="fade-up" data-aos-duration='500'>
 
             <div className='product_card'>
               <img src={cat_logo4} alt="" />
@@ -139,7 +147,7 @@ export default function Home() {
           <button>FIND NEAREST LAFKA</button>
         </div>
 
-        <div className='service_img'>
+        <div className='service_img' data-aos="zoom-in" data-aos-duration='300'>
           <img src={services_img1} alt="" />
         </div>
 
@@ -175,7 +183,7 @@ export default function Home() {
           {
             allproducts.map((item) => {
               return (
-                <div className='product_list' key={item.id}>
+                <div className='product_list' key={item.id}  data-aos="fade-up" data-aos-duration="1000">
                   <ProductCart item={item}></ProductCart>
                 </div>
               )
@@ -188,7 +196,7 @@ export default function Home() {
       {/* section 4 complete */}
 
 
-          <Slider></Slider>
+      <Slider></Slider>
 
     </div>
   )
