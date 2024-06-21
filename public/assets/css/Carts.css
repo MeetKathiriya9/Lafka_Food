@@ -82,7 +82,7 @@
     color: black;
 }
 
-.cart__bottom button {
+.cart__bottom .cbbtn {
     border: none;
     font-size: 14px;
     height: 35px;
@@ -92,15 +92,12 @@
     background-color: #f2002d;
     margin-top: 35px;
     transition: 0.4s;
-}
-
-.cart__bottom button:hover {
-    background-color: #22272d;
-}
-
-.cart__bottom button a {
     color: white;
     font-weight: 600;
+}
+
+.cart__bottom .cbbtn:hover {
+    background-color: #22272d;
 }
 
 @media only screen and (max-width: 576px) {

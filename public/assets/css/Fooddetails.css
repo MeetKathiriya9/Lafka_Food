@@ -145,6 +145,294 @@
 }
 
 
+
+.reviews {
+    background-color: #FAFAFA;
+    border-top: 1px solid #F1F1F1;
+    border-bottom: 1px solid #F1F1F1;
+    padding: 70px 100px;
+}
+
+.reviews .rev_desc {
+    margin: auto;
+    display: ruby-text;
+}
+
+.reviews .rev_desc .rev_descCon1 {
+    border-bottom: hidden;
+    color: #666666;
+    padding: 10px 15px;
+    margin-right: 15px;
+    transition: .2s all;
+}
+
+.reviews .rev_desc .rev_descCon2 {
+    border-bottom: 0px solid black;
+    color: #666666;
+    padding: 10px 15px;
+    transition: .2s all;
+}
+
+.reviews .rev_desc .rev_descConn:hover,
+.reviews .rev_desc .tabs_active {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.reviews .description {
+    width: 75%;
+    margin: 60px auto 0px;
+    color: #666666;
+    line-height: 25px;
+    text-align: center;
+}
+
+.reviews .reviewSec {
+    margin: 60px auto 0px;
+}
+
+.reviews .reviewSec .revSec1 {
+    border-right: 2px solid lightgrey;
+}
+
+.reviews .reviewSec .revSec1 .review-list .revSec1con1 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.reviews .reviewSec .revSec1 .review-list .revSec1con2 {
+    color: #666666;
+}
+
+.reviews .reviewSec .revSec2 {
+    padding-left: 25px;
+}
+
+.reviews .reviewSec .revSec2 .revSec2con1 {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.reviews .reviewSec .revSec2 .revSec2con2 {
+    color: #666666;
+    padding-bottom: 30px;
+}
+
+.reviews .reviewSec .revSec1 .review-list .reviewBox {
+    background-color: white;
+    padding: 30px 20px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.reviews .reviewSec .revSec1 .review-list .reviewBoxes {
+    margin-top: 50px;
+    width: 90%;
+    list-style-type: none;
+}
+
+.reviews .reviewSec .revSec1 .review-list .reviewBox .userimg {
+    position: absolute;
+    width: 60px;
+    border-radius: 50%;
+    top: -31px;
+    left: 35px;
+}
+
+.reviews .reviewSec .revSec1 .review-list .reviewBox .reviewBoxCon1 {
+    font-size: 14px;
+    font-style: italic;
+    color: #999999;
+    padding-left: 14px;
+    padding-top: 12px;
+    padding-bottom: 14px;
+}
+
+.reviews .reviewSec .revSec1 .review-list .reviewBox .reviewBoxCon2 {
+    color: #666666;
+    padding-left: 14px;
+}
+
+.reviews .reviewSec .revSec2 .revSec2Review {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.reviews .reviewSec .revSec2 .revSec2Reviewin {
+    background-color: rgba(0, 0, 0, 5%);
+    width: 96%;
+    border-radius: 6px;
+    border: none;
+    height: 120px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.reviews .reviewSec .revSec2 .revSec2name {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.reviews .reviewSec .revSec2 .revSec2namein {
+    background-color: rgba(0, 0, 0, 5%);
+    width: 94%;
+    border-radius: 6px;
+    border: none;
+    height: 45px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.reviews .reviewSec .revSec2 .revSec2email {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.reviews .reviewSec .revSec2 .revSec2emailin {
+    background-color: rgba(0, 0, 0, 5%);
+    width: 93%;
+    border-radius: 6px;
+    border: none;
+    height: 45px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.reviews .reviewSec .revSec2 .revSec2btn {
+    padding: 9px 20px;
+    background-color: red;
+    font-weight: 800;
+    border: none;
+    border-radius: 28px;
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+
+
+
+
+.product_menu {
+    padding: 50px 0px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+}
+
+.RelatedTitle {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cateLine {
+    border-bottom: 3px solid red;
+}
+
+.product_menu .product_list .product_item {
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    position: relative;
+    transition: 3s all;
+    box-shadow: 0px 0px 100px -68px lightgrey inset;
+}
+
+.product_menu .product_list .product_item::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+    opacity: 0;
+    transition: 0.4s all;
+}
+
+.product_item:hover.product_item::after {
+    opacity: 0.6;
+}
+
+.product_item:hover {
+    transform: scale(0.9);
+}
+
+.product_item .hover_text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 29px;
+    text-align: center;
+    width: 265px;
+    font-weight: bold;
+    color: white;
+    z-index: 1;
+    display: none;
+    transition: 0.4s all;
+}
+
+
+
+.product_item:hover .hover_text {
+    display: block;
+}
+
+.product_menu .product_list .product_item p {
+    border: 1px solid antiquewhite;
+    background-color: #4d2c21;
+    width: 60px;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 8px 9px;
+}
+
+.product_menu .product_list .product_item .product_img {
+    display: flex;
+    justify-content: center;
+}
+
+.product_menu .product_list .product_item img {
+    width: 218px;
+    height: 210px;
+}
+
+.product_menu .product_list .product_item h4 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 16px;
+}
+
+.product_menu .product_list .product_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.product_menu .product_list .product_button button {
+    padding: 6px 13px;
+    border-radius: 25px;
+    border: 2px solid lightgrey;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.product_menu .product_list .product_button button:hover {
+    border: 2px solid black;
+    color: red;
+}
+
+
+
 @media (max-width: 1307px) {
 
     .food {
@@ -160,6 +448,13 @@
     }
 
 }
+
+@media (max-width:1222px) {
+    .product_menu {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 
 @media (max-width: 1195px) {
 
@@ -252,7 +547,31 @@
         width: 325px;
     }
 
+    .reviews {
+        padding: 70px 35px;
+    }
+
+    .reviews .description {
+        width: 85%;
+    }
+
+    .reviews .reviewSec {
+        flex-direction: column;
+    }
+
+    .reviews .reviewSec .revSec2 {
+        padding-left: 0px;
+        padding-top: 50px;
+    }
 }
+
+@media (max-width:992px) {
+    .product_menu .product_list .product_item img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
 
 @media (max-width: 969px) {
 
@@ -342,6 +661,22 @@
         width: 100%;
     }
 
+    .reviews .reviewSec .revSec1 {
+        border: none;
+    }
+
+    .reviews .reviewSec .revSec1 .review-list .reviewBoxes {
+        width: 100%;
+    }
+
+    .product_menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product_menu .product_list .product_item img {
+        width: 215px;
+        height: 215px;
+    }
 }
 
 @media (max-width: 578px) {
@@ -392,7 +727,35 @@
     .food .imagebox .details .order {
         padding: 0px 53px;
     }
-    
+
+}
+
+@media (max-width:576px) {
+    .product_menu .product_list .product_item img {
+        width: 148px;
+        height: 148px;
+    }
+}
+
+@media (max-width:425px) {
+
+    .reviews {
+        padding: 70px 20px;
+    }
+
+    .product_menu {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .product_menu .product_list .product_item img {
+        width: 215px;
+        height: 215px;
+    }
+
+    .product_menu .product_list {
+        padding: 0px 35px;
+    }
+
 }
 
 @media (max-width: 375px) {
@@ -404,7 +767,7 @@
     .images {
         width: 230px;
     }
-    
+
     .food .imagebox .details {
         margin: 20px 0px 0px 0px;
     }
@@ -421,7 +784,7 @@
         width: 137px;
         font-size: 14px;
     }
-    
+
     .food .imagebox .serv .desc1 {
         font-size: 10px;
     }
@@ -443,6 +806,19 @@
     .food .imagebox .price2 {
         font-size: 20px;
         margin: 27px 0px 0px 5px;
+    }
+
+    .product_menu .product_list .product_item img {
+        width: 178px;
+        height: 178px;
+    }
+
+    .RelatedTitle {
+        font-size: 22px;
+    }
+
+    .product_menu .product_list {
+        padding: 0px 20px;
     }
 
 }

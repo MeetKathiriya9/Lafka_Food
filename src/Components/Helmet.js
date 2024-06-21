@@ -1,10 +1,10 @@
-// import {Helmet} from "react-helmet";
-// const Demo = props => (
-// <div className="application">
-//             <Helmet>
-//               <script src="/path/to/resource.js" type="text/javascript" />
-//             </Helmet>
-//             ...
-//         </div>
-  
-// );
+import React from 'react'
+
+export default function Helmet({title,children}) {
+    document.title =  `${title} - Lafka`
+    return (
+        <div>
+            {children}
+        </div>
+    )
+}

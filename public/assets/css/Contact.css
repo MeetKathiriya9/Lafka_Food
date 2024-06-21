@@ -1,0 +1,146 @@
+.contactMap {
+    overflow: hidden;
+    padding-bottom: 50%;
+    position: relative;
+    height: 0;
+}
+
+.contactMap iframe {
+    left: 0;
+    top: 0;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.contact .contactForm {
+    padding: 70px 60px;
+}
+
+.contact .contactForm .contactMsg {
+    margin-right: 60px;
+}
+
+.contact .contactForm .contactMsg .cmHeader {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact .contactForm .contactMsg .cmsub-head {
+    color: #888888;
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+
+.contact .contactForm .contactMsg .ConBoxes {
+    border: 2px solid #f1f1f1;
+    padding: 19px;
+    border-radius: 4px;
+}
+
+.contact .contactForm .contactMsg .ConBoxes .conboxBtn {
+    margin-top: 20px;
+    padding: 13px 24px;
+    border-radius: 36px;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #f2002d;
+    color: white;
+    letter-spacing: 1px;
+    transition: .4s all;
+}
+
+.contact .contactForm .contactMsg .ConBoxes .conboxBtn:hover {
+    background-color: #22272d;
+}
+
+.contact .contactForm .contactMsg .ConBoxes .conBox .cbLabel {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.contact .contactForm .contactMsg .ConBoxes .conBox .cbInput {
+    width: 100%;
+    padding: 10px;
+    background-color: #f6f6f6;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    margin-top: 17px;
+    margin-bottom: 15px;
+}
+
+.contact .contactForm .contactMsg .ConBoxes .conBox .cbTextarea {
+    height: 140px;
+    width: 100%;
+    padding: 10px;
+    background-color: #f6f6f6;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    margin-top: 17px;
+}
+
+.contact .contactForm .contactInfo .cibox .ciboxInfo {
+    margin-top: 20px;
+    color: #888888;
+    margin-bottom: 25px;
+    line-height: 22px;
+}
+
+.contact .contactForm .contactInfo .ciHeader {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.contact .contactForm .contactInfo .cihotelbox {
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    padding: 24px 18px;
+}
+
+.contact .contactForm .contactInfo .cihotelbox .cihbHead {
+    font-weight: bold;
+    padding-bottom: 20px;
+    font-size: 17px;
+}
+
+.contact .contactForm .contactInfo .cihotelbox .cihboxes {
+    color: #888888;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+
+
+@media(max-width:1024px){
+    .contact .contactForm {
+        padding: 50px 25px;
+    }
+}
+
+@media(max-width:768px){
+    .contact .contactForm {
+        flex-direction: column;
+    }
+    .contact .contactForm .contactMsg {
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+    .contactMap {
+        padding-bottom: 75%;
+    }
+}
+
+@media(max-width:576px){
+    .contactMap {
+        padding-bottom: 100%;
+    }
+}

@@ -17,6 +17,7 @@ import ProductCart from './ProductCart'
 import Slider from '../Slider/Slider'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Helmet from '../Components/Helmet'
 
 
 export default function Home() {
@@ -59,6 +60,8 @@ export default function Home() {
 
 
   return (
+    <Helmet title={'Home'}>
+
     <div>
       <Container>
 
@@ -199,5 +202,7 @@ export default function Home() {
       <Slider></Slider>
 
     </div>
+    </Helmet>
+
   )
 }

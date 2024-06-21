@@ -23,25 +23,25 @@ export default function ProductCart(props) {
     return (
         <>
             <div>
-            <Link to={`/foods/${id}`}>
+                <Link to={`/foods/${id}`}>
 
-            <div className='product_item'>
+                    <div className='product_item'>
 
-                <p>$ {price}</p>
+                        <p>$ {price}</p>
 
-                    <div className='product_img'>
-                        <Link to={`/foods/${id}`}><img src={image01} alt='Product Img'
-                            className='w-50'></img></Link>
+                        <div className='product_img'>
+                            <Link to={`/foods/${id}`}><img src={image01} alt='Product Img'
+                                className='w-50'></img></Link>
+                        </div>
+                        <h4><Link to={`/foods/${id}`}>{title}</Link></h4>
+
+                        <h6 className='hover_text'><Link to={`/foods/${id}`}>{title}</Link></h6>
                     </div>
-                    <h4><Link to={`/foods/${id}`}>{title}</Link></h4>
-                    
-                    <h6 className='hover_text'><Link to={`/foods/${id}`}>{title}</Link></h6>
-            </div>
-            </Link>
+                </Link>
 
-</div>
+            </div>
             <div className='product_button'>
-                <button  onClick={addToCart}>ADD TO CART</button>
+                <button onClick={addToCart}>ADD TO CART</button>
             </div>
 
         </>

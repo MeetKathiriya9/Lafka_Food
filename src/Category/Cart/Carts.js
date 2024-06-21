@@ -41,7 +41,7 @@ export default function Carts() {
                 </div>
                 <div className='cart__bottom'>
                     <h6>Subtotal: <span>${totalAmount}</span></h6>
-                    <button><Link to='/checkout'>CHECKOUT</Link></button>
+                    <Link to='/checkout'><button className='cbbtn'>CHECKOUT</button></Link>
                 </div>
             </ListGroup>
         </div>

@@ -15,7 +15,8 @@ export default function CartItem({ item }) {
             id,
             title,
             price,
-            image01
+            image01,
+            quantity: 1
         }))
     }
 

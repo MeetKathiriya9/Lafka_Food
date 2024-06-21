@@ -6,6 +6,7 @@ import ProductCard from '../Pages/ProductCart.js'
 import { useState } from 'react'
 
 import ReactPaginate from 'react-paginate'
+import Helmet from '../Components/Helmet.js'
 
 export default function Allfood() {
 
@@ -14,9 +15,6 @@ export default function Allfood() {
   const [pageNumber, setPageNumber] = useState(0)
 
   const productPerPage = 8;
-
-  // const visitedPage = pageNumber * productPerPage;
-  // const displayPage = productData.slice(visitedPage, visitedPage + productPerPage)
 
   const displayPage = productData
   .filter(item => {
@@ -37,6 +35,8 @@ export default function Allfood() {
 }
 
   return (
+    <Helmet title={'Menu'}>
+
     <div>
 
       <CommonSection title="All Foods"></CommonSection>
@@ -76,5 +76,6 @@ export default function Allfood() {
       </section>
 
     </div>
+    </Helmet>
   )
 }
